@@ -70,8 +70,9 @@ medication-backend/
 
 ### 1. Clone the repository
 ```bash
-git clone <repo-url>
+git clone https://github.com/BharathGovindula/Backend-Prescription-and-Medication-Management-Tool.git
 cd Prescription-and-Medication-Management-Tool
+cd medication-backend
 ```
 
 ### 2. Install dependencies
@@ -79,6 +80,7 @@ cd Prescription-and-Medication-Management-Tool
 npm install
 cd medication-frontend && npm install
 cd ../medication-backend && npm install
+redis-server
 ```
 
 ### 3. Environment Variables
@@ -105,6 +107,7 @@ CLOUDINARY_URL=your_cloudinary_url
 ```bash
 cd medication-backend
 npm start
+redis-server
 ```
 **Frontend:**
 ```bash
