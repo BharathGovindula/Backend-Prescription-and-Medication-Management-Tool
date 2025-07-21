@@ -10,6 +10,7 @@ const remindersRoutes = require('./routes/reminders');
 const errorHandler = require('./middleware/errorHandler');
 const analyticsRoutes = require('./routes/analytics');
 const requestLogger = require('./middleware/requestLogger');
+const notFound = require('./middleware/notFound');
 require('./config'); // Loads environment variables
 
 const app = express();
@@ -38,6 +39,7 @@ app.use('/api/upload', uploadRoutes);
 app.use('/api/medications', medicationRoutes);
 app.use('/api/reminders', remindersRoutes);
 app.use('/api/analytics', analyticsRoutes);
+app.use(notFound)
 app.use(errorHandler);
 
 // Modular cron job for medication reminders
