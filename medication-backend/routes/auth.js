@@ -61,7 +61,9 @@ router.post('/login',
         }
       });
     } catch (err) {
+      console.log("/login auth error",err)
       next(err);
+
     }
   }
 );

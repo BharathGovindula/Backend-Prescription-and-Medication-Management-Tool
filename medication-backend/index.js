@@ -13,7 +13,10 @@ const requestLogger = require('./middleware/requestLogger');
 require('./config'); // Loads environment variables
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://medicinemanagementtool.netlify.app',
+  credentials: true // if you're using cookies or authentication headers
+}));
 app.use(express.json());
 
 // Connect to MongoDB
