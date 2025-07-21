@@ -24,6 +24,8 @@ redisClient.on('connect', () => {
   console.log('Redis connected');
 });
 
+// ✅ Fix for X-Forwarded-For header (REQUIRED for express-rate-limit behind proxy)
+app.set('trust proxy', true);
 // Request logging middleware
 app.use(requestLogger);
 
