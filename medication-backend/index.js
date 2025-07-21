@@ -15,7 +15,7 @@ require('./config'); // Loads environment variables
 
 const app = express();
 app.use(cors({
-  origin: 'https://medicinemanagementtool.netlify.app',
+  origin: "*",
   credentials: true // if you're using cookies or authentication headers
 }));
 app.use(express.json());
