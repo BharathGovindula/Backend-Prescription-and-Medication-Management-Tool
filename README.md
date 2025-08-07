@@ -4,6 +4,8 @@ A modern, full-stack web application for managing prescriptions, medications, ad
 
 ---
 
+
+
 ## Features
 
 - **User Roles:** Patient, Doctor, Admin with role-based access and UI
